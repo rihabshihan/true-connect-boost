@@ -39,7 +39,7 @@ const Footer = () => {
           <div className="space-y-6">
             <div>
               <img 
-                src="/lovable-uploads/179ef881-1655-4980-bd23-530d8163b66f.png" 
+                src="/lovable-uploads/6fb5d993-12f8-4f87-bafe-8eddfa1bf3fb.png" 
                 alt="True Connect Logo" 
                 className="h-12 w-auto mb-4 brightness-0 invert"
               />

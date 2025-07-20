@@ -54,7 +54,8 @@ export default {
 				},
 				'brand-yellow': 'hsl(var(--brand-yellow))',
 				'brand-blue': 'hsl(var(--brand-blue))',
-				'brand-red': 'hsl(var(--brand-red))'
+				'brand-red': 'hsl(var(--brand-red))',
+				'brand-dark': 'hsl(var(--brand-dark))'
 			},
 			fontFamily: {
 				'brand': 'var(--font-brand)',
