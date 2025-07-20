@@ -43,10 +43,16 @@
 
     --radius: 0.75rem;
     
+    /* Professional Heading Colors */
+    --heading-primary: 220 20% 8%;         /* Dark professional for main titles */
+    --heading-secondary: 210 65% 58%;      /* Brand blue for section titles */
+    --heading-accent: 45 100% 55%;         /* Brand yellow for highlights */
+    
     /* Advanced Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--brand-blue)), hsl(var(--brand-yellow)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-blue)) 0%, hsl(var(--brand-yellow)) 50%, hsl(var(--brand-red)) 100%);
+    --gradient-hero: linear-gradient(90deg, hsl(var(--brand-blue)), hsl(var(--brand-yellow)), hsl(var(--brand-red)));
     --gradient-card: linear-gradient(145deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    --gradient-button: linear-gradient(135deg, hsl(var(--brand-blue)), hsl(var(--brand-yellow)));
     
     /* Advanced Shadows */
     --shadow-glow: 0 0 40px hsl(var(--brand-blue) / 0.3);
@@ -118,9 +124,102 @@
 }
 
 @layer components {
-  /* Advanced Button Variants */
+  /* Professional Heading Styles */
+  .heading-primary {
+    color: hsl(var(--heading-primary));
+    font-weight: 700;
+  }
+  
+  .heading-secondary {
+    color: hsl(var(--heading-secondary));
+    font-weight: 600;
+  }
+  
+  .heading-gradient {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+  }
+  
+  /* Professional Button Variants */
+  .btn-primary {
+    background: hsl(var(--brand-blue));
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px hsl(var(--brand-blue) / 0.3);
+  }
+  
+  .btn-primary:hover {
+    background: hsl(210 65% 50%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px hsl(var(--brand-blue) / 0.4);
+  }
+  
+  .btn-secondary {
+    background: hsl(var(--brand-yellow));
+    color: hsl(var(--brand-dark));
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px hsl(var(--brand-yellow) / 0.3);
+  }
+  
+  .btn-secondary:hover {
+    background: hsl(45 100% 50%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px hsl(var(--brand-yellow) / 0.4);
+  }
+  
   .btn-gradient {
-    @apply bg-gradient-to-r from-brand-blue to-brand-yellow text-white font-semibold py-3 px-8 rounded-xl shadow-elegant hover:shadow-glow transition-all duration-500 hover:scale-105;
+    background: var(--gradient-button);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px hsl(var(--brand-blue) / 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, hsl(var(--brand-blue)) 0%, hsl(var(--brand-yellow)) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .btn-gradient:hover::before {
+    opacity: 1;
+  }
+  
+  .btn-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px hsl(var(--brand-blue) / 0.4);
+  }
+  
+  .btn-urgent {
+    background: hsl(var(--brand-red));
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px hsl(var(--brand-red) / 0.3);
+  }
+  
+  .btn-urgent:hover {
+    background: hsl(0 85% 50%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px hsl(var(--brand-red) / 0.4);
   }
   
   .btn-glow {
@@ -135,17 +234,31 @@
     transition: var(--transition-smooth);
   }
   
-  .btn-glow:hover::before {
-    @apply opacity-30 translate-x-[100%];
-  }
-  
   /* Text Gradients */
   .text-gradient {
-    @apply bg-gradient-to-r from-brand-blue to-brand-yellow bg-clip-text text-transparent;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   
   .text-hero {
-    @apply bg-gradient-to-r from-brand-blue via-brand-yellow to-brand-red bg-clip-text text-transparent;
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-brand-primary {
+    color: hsl(var(--heading-primary));
+  }
+  
+  .text-brand-secondary {
+    color: hsl(var(--heading-secondary));
+  }
+  
+  .text-brand-accent {
+    color: hsl(var(--heading-accent));
   }
   
   /* Glass Effect */

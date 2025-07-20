@@ -148,7 +148,7 @@ const ContactSection = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 ref={titleRef} className="font-brand text-4xl md:text-6xl font-bold mb-6">
-              Get In <span className="text-gradient">Touch</span>
+              Get In <span className="heading-gradient">Touch</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Ready to boost your business connectivity? Contact our experts for 
@@ -160,7 +160,7 @@ const ContactSection = () => {
             {/* Contact Form */}
             <Card ref={formRef} className="glass shadow-elegant">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-gradient">
+                <CardTitle className="heading-gradient text-2xl font-bold">
                   Send us a Message
                 </CardTitle>
               </CardHeader>
@@ -240,7 +240,7 @@ const ContactSection = () => {
                         <info.icon className={`h-6 w-6 ${info.color}`} />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-lg text-foreground mb-2">
+                        <h3 className="text-brand-primary font-semibold text-lg mb-2">
                           {info.title}
                         </h3>
                         <div className="space-y-1">

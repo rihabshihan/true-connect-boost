@@ -97,7 +97,7 @@ const ServicesSection = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 ref={titleRef} className="font-brand text-4xl md:text-6xl font-bold mb-6">
-              Our <span className="text-gradient">Services</span>
+              Our <span className="heading-gradient">Services</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Comprehensive internet connectivity solutions designed to empower 
@@ -117,7 +117,7 @@ const ServicesSection = () => {
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                       <service.icon className={`h-8 w-8 ${service.color}`} />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-3">
+                    <h3 className="text-brand-primary text-xl font-bold mb-3">
                       {service.title}
                     </h3>
                   </div>

@@ -60,8 +60,8 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Title */}
           <h1 ref={titleRef} className="font-brand text-6xl md:text-8xl lg:text-9xl font-bold mb-6">
-            <span className="text-gradient">TRUE</span>{' '}
-            <span className="text-foreground">CONNECT</span>
+            <span className="heading-gradient">TRUE</span>{' '}
+            <span className="text-brand-primary">CONNECT</span>
           </h1>
           
           {/* Tagline */}
@@ -81,7 +81,7 @@ const HeroSection = () => {
               Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-2 border-primary hover:bg-primary hover:text-primary-foreground">
+            <Button size="lg" className="btn-secondary text-lg px-8 py-4">
               View Plans
             </Button>
           </div>

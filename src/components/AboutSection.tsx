@@ -86,7 +86,7 @@ const AboutSection = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 ref={titleRef} className="font-brand text-4xl md:text-6xl font-bold mb-6">
-              About <span className="text-gradient">True Connect</span>
+              About <span className="heading-gradient">True Connect</span>
             </h2>
           </div>
 
@@ -94,7 +94,7 @@ const AboutSection = () => {
             {/* Content */}
             <div ref={contentRef} className="space-y-8">
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
+                <h3 className="text-brand-primary text-2xl md:text-3xl font-bold mb-4">
                   Revolutionizing Enterprise Connectivity
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -106,7 +106,7 @@ const AboutSection = () => {
               </div>
 
               <div>
-                <h4 className="text-xl font-semibold mb-3 text-primary">
+                <h4 className="text-brand-secondary text-xl font-semibold mb-3">
                   Our Mission
                 </h4>
                 <p className="text-muted-foreground leading-relaxed">
@@ -117,7 +117,7 @@ const AboutSection = () => {
               </div>
 
               <div>
-                <h4 className="text-xl font-semibold mb-3 text-primary">
+                <h4 className="text-brand-secondary text-xl font-semibold mb-3">
                   Why Choose Us?
                 </h4>
                 <ul className="space-y-2 text-muted-foreground">

@@ -57,7 +57,7 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="btn-glow">
+            <Button className="btn-primary">
               Get Quote
             </Button>
           </div>
@@ -85,7 +85,7 @@ const Navbar = () => {
                   {item.label}
                 </a>
               ))}
-              <Button className="btn-glow mt-4 w-full">
+              <Button className="btn-primary mt-4 w-full">
                 Get Quote
               </Button>
             </div>

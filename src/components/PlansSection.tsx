@@ -104,7 +104,7 @@ const PlansSection = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 ref={titleRef} className="font-brand text-4xl md:text-6xl font-bold mb-6">
-              Choose Your <span className="text-gradient">Plan</span>
+              Choose Your <span className="heading-gradient">Plan</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Scalable internet solutions designed for businesses of all sizes. 
@@ -133,13 +133,13 @@ const PlansSection = () => {
                 )}
                 
                 <CardHeader className={`text-center ${plan.popular ? 'pt-16' : 'pt-8'}`}>
-                  <CardTitle className="text-2xl font-bold text-foreground">
+                  <CardTitle className="text-brand-primary text-2xl font-bold">
                     {plan.name}
                   </CardTitle>
-                  <div className="text-4xl font-bold text-gradient mb-2">
+                  <div className="text-gradient text-4xl font-bold mb-2">
                     {plan.speed}
                   </div>
-                  <div className="text-3xl font-bold text-foreground">
+                  <div className="text-brand-primary text-3xl font-bold">
                     {plan.price}
                     <span className="text-lg text-muted-foreground font-normal">/month</span>
                   </div>
@@ -159,7 +159,7 @@ const PlansSection = () => {
                     className={`w-full ${
                       plan.popular 
                         ? 'btn-gradient' 
-                        : 'btn-glow'
+                        : 'btn-primary'
                     }`}
                     size="lg"
                   >
@@ -175,7 +175,7 @@ const PlansSection = () => {
             <p className="text-lg text-muted-foreground mb-6">
               Need a custom solution? We offer tailored plans for specific requirements.
             </p>
-            <Button variant="outline" size="lg" className="border-2 border-primary hover:bg-primary hover:text-primary-foreground">
+            <Button className="btn-secondary" size="lg">
               Contact Sales
             </Button>
           </div>
